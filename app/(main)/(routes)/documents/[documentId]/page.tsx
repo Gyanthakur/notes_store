@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import { useMemo } from "react";
 
 // import { Cover } from "@/components/cover";
-// import { Toolbar } from "@/components/toolbar";
+import { Toolbar } from "@/components/toolbar";
 import { Skeleton } from "@/components/ui/skeleton";
 import { api } from "@/convex/_generated/api";
 import type { Id } from "@/convex/_generated/dataModel";
@@ -55,7 +55,8 @@ const DocumentIdPage = ({ params }: DocumentIdPageProps) => {
     <div className="pb-40">
       {/* <Cover preview={document.isArchived} url={document.coverImage} /> */}
       <div className="md:max-w-3xl lg:max-w-3xl mx-auto">
-        {/* <Toolbar preview={document.isArchived} initialData={document} /> */}
+        <Toolbar preview={document.isArchived} initialData={document} />
+        
         {/* <Editor
           editable={!document.isArchived}
           onChange={onChange}
