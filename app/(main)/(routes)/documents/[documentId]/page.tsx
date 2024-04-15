@@ -4,7 +4,7 @@ import { useMutation, useQuery } from "convex/react";
 import dynamic from "next/dynamic";
 import { useMemo } from "react";
 
-// import { Cover } from "@/components/cover";
+import { Cover } from "@/components/cover";
 import { Toolbar } from "@/components/toolbar";
 import { Skeleton } from "@/components/ui/skeleton";
 import { api } from "@/convex/_generated/api";
@@ -37,7 +37,7 @@ const DocumentIdPage = ({ params }: DocumentIdPageProps) => {
   if (document === undefined)
     return (
       <div>
-        {/* <Cover.Skeleton /> */}
+        <Cover.Skeleton />
         <div className="md:max-w-3xl lg:mac-w-4xl mx-auto mt-10">
           <div className="space-y-4 pl-8 pt-4">
             <Skeleton className="h-14 w-[50%]" />
@@ -53,7 +53,7 @@ const DocumentIdPage = ({ params }: DocumentIdPageProps) => {
 
   return (
     <div className="pb-40">
-      {/* <Cover preview={document.isArchived} url={document.coverImage} /> */}
+      <Cover preview={document.isArchived} url={document.coverImage} />
       <div className="md:max-w-3xl lg:max-w-3xl mx-auto">
         <Toolbar preview={document.isArchived} initialData={document} />
         

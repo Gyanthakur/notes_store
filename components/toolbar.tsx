@@ -3,7 +3,7 @@
 import { useMutation } from "convex/react";
 import { ImageIcon, Smile, X } from "lucide-react";
 import React, { type ElementRef, useRef, useState } from "react";
-// import TextareaAutoSize from "react-textarea-autosize";
+import TextareaAutoSize from "react-textarea-autosize";
 
 import { Button } from "@/components/ui/button";
 import { api } from "@/convex/_generated/api";
@@ -92,7 +92,7 @@ export const Toolbar = ({ initialData, preview }: ToolbarProps) => {
         <p className="text-6xl pt-6">{initialData.icon}</p>
       )}
 
-      <div className="opacity-200 group-hover:opacity-100 flex items-center gap-x-1 py-4">
+      <div className="opacity-0 group-hover:opacity-100 flex items-center gap-x-1 py-4">
         {!initialData.icon && !preview && (
           <IconPicker onChange={onIconSelect} asChild>
             <Button
@@ -119,7 +119,7 @@ export const Toolbar = ({ initialData, preview }: ToolbarProps) => {
         )}
       </div>
 
-      {/* {isEditing && !preview ? (
+      {isEditing && !preview ? (
         <TextareaAutoSize
           ref={inputRef}
           onBlur={disableInput}
@@ -136,7 +136,7 @@ export const Toolbar = ({ initialData, preview }: ToolbarProps) => {
         >
           {initialData.title}
         </div>
-      )} */}
+      )}
     </div>
   );
 };
