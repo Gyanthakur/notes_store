@@ -2,9 +2,9 @@
 const nextConfig = {
     images:{
         domains:[
-            "files.edgestore.dev "
+            "files.edgestore.dev"
         ]
     }
 };
 
-export default nextConfig;
+module.exports = nextConfig;

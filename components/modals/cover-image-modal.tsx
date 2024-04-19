@@ -41,7 +41,7 @@ export const CoverImageModal = () => {
 
     await update({
       id: params.documentId as Id<"documents">,
-    //   coverImage: res.url,
+      coverImage: res.url,
     });
 
     onClose();

@@ -61,7 +61,7 @@ const DocumentIdPage = ({ params }: DocumentIdPageProps) => {
           editable={!document.isArchived}
           onChange={onChange}
           initialContent={document.content}
-        /> */}
+        /> */}  
       </div>
     </div>
   );
