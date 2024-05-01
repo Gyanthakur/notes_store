@@ -1,7 +1,7 @@
 "use client";
 import { cn  } from "@/lib/utils";
-import { ChevronLeft, MenuIcon, Plus, PlusCircle, Search, Settings, Trash } from "lucide-react";
-import { useParams, usePathname } from "next/navigation";
+import { ChevronLeft, MenuIcon, Plus, PlusCircle, Router, Search, Settings, Trash } from "lucide-react";
+import { useParams, usePathname, useRouter } from "next/navigation";
 import { ElementRef, useRef, useState } from "react";
 import { useMediaQuery } from "usehooks-ts";
 import { useEffect } from "react";
@@ -17,7 +17,9 @@ import { useSearch } from "@/hooks/use-search";
 import { useSettings } from "@/hooks/use-settings";
 import { Navbar } from "./navbar";
 
+
 export const Navigation = () =>{
+   const router = useRouter();
   const search = useSearch();
   const settings = useSettings();
   const params = useParams();
@@ -113,8 +115,9 @@ export const Navigation = () =>{
   }
 
   const handleCreate = () =>{
-    const promise = create({ title: "Untitled" });
-
+    const promise = create({ title: "Untitled" }).then((documentId) =>
+      router.push(`/documents/${documentId}`)
+    );
     toast.promise(promise, {
       loading: "Createing a new note...",
       success: "New note created!",

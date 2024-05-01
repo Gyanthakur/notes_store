@@ -13,14 +13,14 @@ import {
 } from "@/components/ui/popover";
 import { api } from "@/convex/_generated/api";
 import type { Doc } from "@/convex/_generated/dataModel";
-// import { useOrigin } from "@/hooks/use-origin";
+import { useOrigin } from "@/hooks/use-origin";
 
 type PublishProps = {
   initialData: Doc<"documents">;
 };
 
 export const Publish = ({ initialData }: PublishProps) => {
-//   const origin = useOrigin();
+  const origin = useOrigin();
   const update = useMutation(api.documents.update);
   const [copied, setCopied] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
