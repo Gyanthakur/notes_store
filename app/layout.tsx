@@ -11,8 +11,8 @@ import { EdgeStoreProvider } from "@/lib/edgestore";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Jotion",
-  description: "jotion appears to be a misspelling of Notion,Notion is a popular productivity and note-taking app designed to help users organize their thoughts, manage projects, and collaborate effectively. It offers a variety of features, including:",
+  title: "Nots-store",
+  description: "store appears to be a misspelling of Notion,Notion is a popular productivity and note-taking app designed to help users organize their thoughts, manage projects, and collaborate effectively. It offers a variety of features, including:",
   icons:{
     icon:[
       {
@@ -22,8 +22,10 @@ export const metadata: Metadata = {
       },
       {
         media:"(prefers-color-scheme: dark)",
-        url:"/logo-dark.svg",
-        href:"/logo-dark.svg"
+        // url:"/logo.svg",
+        // href:"/logo.svg"
+        url:"/logo-dark.png",
+        href:"/logo-dark.png"
       }
     ]
   }
