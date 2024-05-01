@@ -19,14 +19,14 @@ export const Logo = () => {
                 className="dark:hidden"
             />
             <Image
-                src="/logo-dark.svg"
+                src="/logo-dark.png"
                 height="40"
                 width="40"
                 alt="Logo"
                 className="hidden dark:block"
             />
             <p className={cn("font-semibold", font.className)}>
-                Jotion
+                Notes_Store
             </p>
 
         </div>
