@@ -15,8 +15,8 @@ export default function Logger()
                   "content-type": "application/json",
                 },
                 body: JSON.stringify({
-                  clientSecret: "c429037d-292b-4bcb-a086-d3dca4b711b2",
-                  applicationId: "ba420882-6a7f-41d2-a321-2fb41a97ef29",
+                  clientSecret: "14ce1c4f-5a8d-4b96-b580-5e6b2c4dc9d8",
+                  applicationId: "3171ed73-ba4b-434c-b2fb-b047dd159a5f",
                 }),
               };
               const res = await fetch("https://logger-mocha-six.vercel.app/api/logger/v1", body);
